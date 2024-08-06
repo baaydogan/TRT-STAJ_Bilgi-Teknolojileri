@@ -392,7 +392,7 @@ Artık SSH bağlantımızı başarılı şekilde yapabiliyoruz.
 
 ---
 
-## SSH-Keygen
+### SSH-Keygen
 
 `SSH-Keygen`; farklı şifreler girmek ve bu farklı şifreleri hatırlamak zorunda kalmamak için oluşturulan bir anahtarlama sistemidir. Kısaca kullanıcılara ait parmak izi niteliğindedir.
 
@@ -400,7 +400,7 @@ SSH bağlantımızı şifre kullanmadan yapabilmek için en güvenli işlem `SSH
 
 
 
-### Public Key ve Private Key oluşturma
+#### Public Key ve Private Key oluşturma
 
 > [!NOTE]
 > SSH Public Key (Açık Anahtar) erişim sağlayacağınız sunucuya,
@@ -438,7 +438,7 @@ Artık şifre kullanmadan SSH bağlantımızı gerçekleştirebiliriz.
 
 ---
 
-## SSH Config
+### SSH Config
 
 
 
