@@ -19,9 +19,19 @@ Ubuntu, sunucu ortamlarında yaygın olarak tercih edilir çünkü:
 - Topluluk Desteği: Ubuntu'nun geniş bir topluluğu ve kapsamlı dökümantasyonu vardır, bu da sorun çözmeyi kolaylaştırır.
 
 ## ORTAM KURULUMU
+### VirtualBox Kurulumu
+Ubuntu Server'ı kuracağımız Sanal Sunucu ortamı olarak VirtualBox kurulumu gerçekleştirmemiz gerekmektedir.
+[Kurulum Linki](https://www.virtualbox.org/wiki/Downloads)
+
+![image](https://github.com/user-attachments/assets/c8ab1486-4ed9-437c-a6b9-40710646a265)
+
 ### Ubuntu Server Yüklemesi
 Staj süreci boyunca stabillik ve ihtiyaç fazlası eklentilerle uğraşmamak amacıyla 22.04.04 sürümü kullanılmıştır.
 
 Ubuntu Server kurulum ISO dosyasını [Ubuntu 22.04.04](https://releases.ubuntu.com/jammy/) adresi üzerinden indirebilirsiniz. İndirmeniz gereken dosya adı ***"ubuntu-22.04.4-live-server-amd64.iso"***
 
 ![image](https://github.com/user-attachments/assets/4db03415-70c3-493c-8b2d-133a7ee4d162)
+
+
+
+
