@@ -1,4 +1,4 @@
-# TRT STAJI: Bilgi Teknolojileri
+![image](https://github.com/user-attachments/assets/dd1a588c-9ce0-458c-a1ee-54da5de77e81)# TRT STAJI: Bilgi Teknolojileri
 Bu repository içerisinde TRT Genel Müdürlüğü Bilgi Teknolojilerinde yapılan staj günlerinin günlük açıklamaları bulunmaktadır. Umarım faydalı olur.
 
 | # Günler | Başlıklar |
@@ -356,9 +356,30 @@ Bağlantı kurulduğunda, uzaktaki bilgisayarın terminaline erişim sağlanır 
 > ```
 > Artık rahatlıkla SSH bağlantısı yapmaya başlayabilirsin!
 
+Powershell üzerinden `OpenSSH` servisini kullanarak `Ubuntu Serverimize` bağlanmaya kaldığımız yerden devam edebiliriz. Bağlantı yapabilmek için öncelikle Sanal Makinemizin IP Adresine ihtiyacımız var. Bunu öğrenebilmek için sanal makinemizin terminaline aşağıdaki komutu girelim:
+```sh
+ip addr
+```
 
+ardından bizi karşılayan ekranda `enp0s3` ip adresini kopyalayım. Çünkü artık bu bizim SSH bağlantısı yapacağımız ip adresimiz olacak.
 
+![Ekran görüntüsü 2024-08-06 160804](https://github.com/user-attachments/assets/645ada94-ebd1-4e1b-aa12-d6733eb979c8)
 
+İp adresimizi de öğrendiğimize göre artık SSH bağlantısını yapabiliriz. SSH bağlantısını yapabilmek için aşağıdaki kodu PowerShell içierisine yazalım.
+
+```sh
+ssh kullanıcı_adi@hedef_ip_adresi
+```
+
+gerekli komutu çalıştırdıktan sonra bizden parola isteyecek. Bu parolaya, Serverimizi kurarken belirlediğimiz şifreyi yazmak yeterli olacaktır.
+
+![Ekran görüntüsü 2024-08-06 161851](https://github.com/user-attachments/assets/24f10320-5f43-4745-8e4c-c97dafaaf659)
+
+TEBRİKLER 🎉🎉
+Artık SSH bağlantımızı başarılı şekilde yapabiliyoruz.
+
+> [!NOTE]
+> Görselde SSH bağlantısını yaparken hem `ip adresi` kullanmadık hem de `parola` girmeden giriş yapabildik. Şimdi sıra bunun nasıl yapıldığına geldi!
 
 
 
