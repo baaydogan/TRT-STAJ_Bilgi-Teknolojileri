@@ -109,11 +109,163 @@ Ubuntu Server ve gerekli servislerin kurulumları başlayacaktır. Bütün kurul
 ![image](https://github.com/user-attachments/assets/80af0ad4-2b0c-4cdf-94f7-976692b8a8f3)
 
 
-## Ubuntu Server'a Giriş
+## UBUNTU SERVER'A GİRİŞ
 
-Artık nur topu gibi bir sunucumuz oldu! 
+🎉🎉🎉 Artık nur topu gibi bir sunucumuz oldu! 🎉🎉🎉
+
+Server açıldığında bizi ilk olarak kullanıcı bilgilerini girmemiz istenen ekran karşılıyor.
+
+> [!TIP]
+> Ubuntu Server açıldığında varsayılan olarak Num lock `OFF` modunda ayarlı oluyor.
+
+
+![image](https://github.com/user-attachments/assets/44d8e457-ea4a-4427-b186-ce99dcfc4713)
 
 ![Ekran görüntüsü 2024-08-06 121734](https://github.com/user-attachments/assets/de0f9711-f2aa-4319-a679-127f84c69af7)
+
+### Terminal Temel Komutları
+
+Ubuntu terminali için temel komutlar aşağıdaki gibidir
+
+#### Dosya ve Dizin İşlemleri
+
+**ls**
+   ```sh
+   ls       # Dizin içeriğini listelemek için
+   ls -la   # Alt dizinlerle birlikte detaylı listeleme için
+   ```
+**cd**
+   ```sh
+   cd /path/to/directory   # Dizin değiştirmek
+   cd ~                    # Ana dizine dönmek için
+   cd ..                   # Bir üst dizine geçmek için 
+   ```
+   
+**pwd**
+   ```sh
+   pwd    # Bulunduğunuz dizinin yolunu öğrenmek
+   ```
+
+**mkdir**
+   ```sh
+   mkdir yeni_dizin    # Yeni bir dizin oluşturmak
+   ```
+
+**rmdir** 
+   ```sh
+   rmdir boş_dizin   # Boş bir dizini silmek
+   ```
+
+**rm**
+   ```sh
+   rm dosya.txt        # Tek bir dosya silmek için
+   rm -r dizin_adi     # Dizin(klasör) ve içeriğini silmek için
+   ```
+
+**cp**
+   ```sh
+   cp kaynak_dosya hedef_dosya        # Tek bir dosya kopyalamak için
+   cp -r kaynak_dizin hedef_dizin     # Dizin ve içeriğini kopyalamak için
+   ```
+
+**mv**
+   ```sh
+   mv kaynak hedef              # Dizin/Dosya Taşımak için
+   mv eski_isim yeni_isim       # Dizin/Dosya Yeniden adlandırmak için
+   ```
+
+#### Dosya Görüntüleme ve Düzenleme
+
+**cat**
+   ```sh
+   cat dosya.txt     # Dosya içeriğini görüntülemek
+   ```
+
+**less**
+   ```sh
+   less dosya.txt    # Dosya içeriğini sayfa sayfa görüntülemek
+   ```
+
+**head**
+   ```sh
+   head dosya.txt     # Dosyanın ilk satırlarını görüntülemek
+   ```
+
+**nano** || **vim**
+   ```sh
+   nano dosya.txt
+   ```
+   veya
+   ```sh
+   vim dosya.txt
+   ```
+
+#### Sistem Yönetimi
+
+**sudo**
+   ```sh
+   sudo komut   # Yönetici (root) yetkisi ile komut çalıştırmak için
+   ```
+
+**apt-get** || **apt**
+   ```sh
+   sudo apt-get update    # Paket listelerini güncellemek için
+   ```
+   
+   ```sh
+   sudo apt-get install paket_adi    # Paket kurmak için 
+   ```
+
+   ```sh
+   sudo apt-get remove paket_adi     # Paket kaldırmak için
+   ```
+
+**ps**
+   ```sh
+   ps aux    # Çalışan süreçleri görüntülemek için
+   ```
+
+**top**
+   ```sh
+   top    # Canlı süreç izlemek için
+   ```
+
+**kill**
+   ```sh
+   kill PID   # Süreç sonlandırmak için
+   ```
+   > [!NOTE]
+   > PID (Process ID) süreç kimliğidir.
+
+#### Ağ Komutları
+
+**ping**
+   ```sh
+   ping hedef_ip_adresi    # Ağ bağlantısını test etmek için
+   ```
+
+**ifconfig**
+   ```sh
+   ifconfig    # Ağ arayüzlerini ve IP adreslerini görüntülemek için
+   ```
+
+**ssh**
+   ```sh
+   ssh kullanıcı_adi@hedef_ip_adresi    # SSH ile uzak sunucuya bağlanmak için
+   ```
+
+#### Yardım ve Bilgi
+
+**man**
+   ```sh
+   man komut_adi    # Komutların kullanım kılavuzunu görüntülemek için
+   ```
+
+**--help**
+   ```sh
+   komut_adi --help   # Komut hakkında yardım almak için
+   ```
+
 
 
 
