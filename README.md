@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dd1a588c-9ce0-458c-a1ee-54da5de77e81)# TRT STAJI: Bilgi Teknolojileri
+# TRT STAJI: Bilgi Teknolojileri
 Bu repository içerisinde TRT Genel Müdürlüğü Bilgi Teknolojilerinde yapılan staj günlerinin günlük açıklamaları bulunmaktadır. Umarım faydalı olur.
 
 | # Günler | Başlıklar |
