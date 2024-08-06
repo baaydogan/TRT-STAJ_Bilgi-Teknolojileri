@@ -18,6 +18,9 @@ Ubuntu, sunucu ortamlarında yaygın olarak tercih edilir çünkü:
 - Güvenlik: Düzenli güvenlik güncellemeleri ve açık kaynak kodlu olması nedeniyle güvenlik açısından avantajlıdır.
 - Topluluk Desteği: Ubuntu'nun geniş bir topluluğu ve kapsamlı dökümantasyonu vardır, bu da sorun çözmeyi kolaylaştırır.
 
+---
+---
+
 ## ORTAM KURULUMU
 ### VirtualBox Kurulumu
 Ubuntu Server'ı kuracağımız Sanal Sunucu ortamı olarak VirtualBox kurulumu gerçekleştirmemiz gerekmektedir.
@@ -108,6 +111,8 @@ Ubuntu Server ve gerekli servislerin kurulumları başlayacaktır. Bütün kurul
 
 ![image](https://github.com/user-attachments/assets/80af0ad4-2b0c-4cdf-94f7-976692b8a8f3)
 
+---
+---
 
 ## UBUNTU SERVER'A GİRİŞ
 
@@ -122,6 +127,8 @@ Server açıldığında bizi ilk olarak kullanıcı bilgilerini girmemiz istenen
 ![image](https://github.com/user-attachments/assets/44d8e457-ea4a-4427-b186-ce99dcfc4713)
 
 ![Ekran görüntüsü 2024-08-06 121734](https://github.com/user-attachments/assets/de0f9711-f2aa-4319-a679-127f84c69af7)
+
+---
 
 ### Terminal Temel Komutları
 
@@ -275,6 +282,8 @@ Terminal üzerinde çalışırken bize sıkça lazım olacak komutlar aşağıda
 
 Terminal komutlarını da öğrendiğimize göre artık SSH bağlantısı yapabilmeyi ve detaylarını öğrenebiliriz.
 
+---
+---
 
 ### SSH Bağlantısı
 
