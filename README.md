@@ -113,7 +113,7 @@ Ubuntu Server ve gerekli servislerin kurulumları başlayacaktır. Bütün kurul
 
 🎉🎉🎉 Artık nur topu gibi bir sunucumuz oldu! 🎉🎉🎉
 
-Server açıldığında bizi ilk olarak kullanıcı bilgilerini girmemiz istenen ekran karşılıyor.
+Server açıldığında bizi ilk olarak kullanıcı bilgilerini girmemiz istenen ekran karşılıyor. Buraya gerekli bilgileri girdikten sonra bizi asıl çalışmlarımızı yürüteceğimiz terminal ekranı karşılıyor.
 
 > [!TIP]
 > Ubuntu Server açıldığında varsayılan olarak Num lock `OFF` modunda ayarlı oluyor.
