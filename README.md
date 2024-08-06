@@ -199,7 +199,6 @@ Terminal üzerinde çalışırken bize sıkça lazım olacak komutlar aşağıda
    ```sh
    nano dosya.txt
    ```
-   veya
    ```sh
    vim dosya.txt
    ```
@@ -273,6 +272,89 @@ Terminal üzerinde çalışırken bize sıkça lazım olacak komutlar aşağıda
    ```sh
    komut_adi --help   # Komut hakkında yardım almak için
    ```
+
+Terminal komutlarını da öğrendiğimize göre artık SSH bağlantısı yapabilmeyi ve detaylarını öğrenebiliriz.
+
+
+### SSH Bağlantısı
+
+#### SSH Nedir?
+SSH (Secure Shell), ağ üzerinden güvenli bir şekilde veri iletimi ve uzaktan yönetim sağlamak için kullanılan bir protokoldür. SSH, kullanıcıların başka bir bilgisayarda komutları çalıştırmasına, dosya transferi yapmasına ve ağ servislerini güvenli bir şekilde kullanmasına olanak tanır. SSH, özellikle güvenlik gerektiren işlemler için tercih edilir.
+
+#### SSH Neden Kullanılır?
+
+1. **Güvenlik:**
+   - SSH, veri iletimi sırasında tüm trafiği şifreler. Bu, ağ üzerindeki potansiyel saldırganların veri paketlerini okuyamamasını sağlar.
+   - Kimlik doğrulama mekanizmaları, kullanıcıların kimliklerini doğrulamak için güvenli yöntemler sunar.
+
+2. **Uzak Yönetim:**
+   - SSH, uzaktaki bir bilgisayara erişip komut çalıştırma imkanı verir. Bu, sistem yöneticileri ve geliştiriciler için vazgeçilmez bir araçtır.
+   - Uzak sunucuların bakımını ve yönetimini kolaylaştırır.
+
+3. **Dosya Transferi:**
+   - SSH, SCP (Secure Copy) ve SFTP (SSH File Transfer Protocol) gibi protokoller aracılığıyla güvenli dosya transferi yapmayı sağlar.
+   - Büyük dosyaların veya hassas verilerin güvenli bir şekilde taşınmasını sağlar.
+
+4. **Tünelleme ve Port Yönlendirme:**
+   - SSH tünelleme, güvenli bir bağlantı üzerinden başka bir ağ servisine erişim sağlar. Örneğin, uzaktaki bir veritabanına güvenli bir şekilde bağlanmak için kullanılabilir.
+   - Port yönlendirme, belirli portların güvenli bir şekilde yeniden yönlendirilmesini sağlar.
+
+5. **Çapraz Platform Desteği:**
+   - SSH, Linux, macOS ve Windows dahil olmak üzere çeşitli işletim sistemlerinde kullanılabilir.
+   - Bu, farklı platformlar arasında uyumluluk ve esneklik sağlar.
+
+#### SSH Bağlantısı Kurma
+
+SSH bağlantısı kurmak için, SSH istemcisi olan bir bilgisayardan SSH sunucusu çalıştıran bir bilgisayara bağlanılır. Aşağıdaki komut, bir SSH bağlantısı kurmak için kullanılır:
+
+```sh
+ssh kullanıcı_adi@hedef_ip_adresi
+```
+
+Bağlantı kurulduğunda, uzaktaki bilgisayarın terminaline erişim sağlanır ve komutlar sanki yerel bir terminalde çalışıyormuş gibi çalıştırılabilir.
+
+> [!IMPORTANT]
+> Eğer uzak cihazınızdan SSH bağlantısı yapamıyor iseniz, PowerShell kullanarak OpenSSH servisini yükleleyelim.
+> Öncelikle PowerShell'i `YÖNETİCİ olarak çalıştırın`. ardından OpenSSH servisinin sizde yüklü olmadığına emin olmak için aşağıda belirtilen kodu yazarak kontrol yapın.
+> ```sh
+>Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+> ```
+> eğer size aşağıdaki gibi bir geri dönüş geliyorsa OpenSSH sizde yüklü demektir.
+> ```sh
+>Name  : OpenSSH.Client~~~~0.0.1.0
+>State : NotPresent
+>
+>Name  : OpenSSH.Server~~~~0.0.1.0
+>State : NotPresent
+> ```
+> Eğer ki gelmiyorsa şimdi OpenSSH servisini yüklemeye geçebiliriz. Yüklemek için aşağıdaki kodu yazalım.
+>  ```sh
+>Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+>Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+> ```
+> Her iki komut da aşağıdaki çıktıyı döndürmelidir:
+>```sh
+>Path          :
+>Online        : True
+>RestartNeeded : False
+>```
+>OpenSSH Sunucusunu ilk kullanım için başlatmak ve yapılandırmak için PowerShell'i yönetici olarak çalıştırın. Ardından sshd hizmetini başlatmak için aşağıdaki komutları çalıştırın:
+> ```sh
+># SSHD servisini başlat
+>Start-Service sshd
+>
+># İsteğe bağlı ancak yapmanız tavsiye edilir.
+>Set-Service -Name sshd -StartupType 'Automatic'
+>
+># Güvenlik Duvarı kuralının yapılandırıldığını onaylayın. Kurulum tarafından otomatik olarak oluşturulması gerekir. Doğrulamak için aşağıdakileri yapın.
+>if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+>    Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
+>    New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+>} else {
+>    Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
+>}
+> ```
+> Artık rahatlıkla SSH bağlantısı yapmaya başlayabilirsin!
 
 
 
