@@ -381,11 +381,14 @@ Artık SSH bağlantımızı başarılı şekilde yapabiliyoruz.
 > [!NOTE]
 > Görselde SSH bağlantısını yaparken hem `ip adresi` kullanmadık hem de `parola` girmeden giriş yapabildik. Şimdi sıra bunun nasıl yapıldığına geldi!
 
+---
+
 ### SSH-Keygen
 
 `SSH-Keygen`; farklı şifreler girmek ve bu farklı şifreleri hatırlamak zorunda kalmamak için oluşturulan bir anahtarlama sistemidir. Kısaca kullanıcılara ait parmak izi niteliğindedir.
 
 SSH bağlantımızı şifre kullanmadan yapabilmek için en güvenli işlem `SSH Public key` kullanmak olacaktır. SSH Public key kullanımı sayesinde özellikle ağ yöneticileri, birbirinden farklı uzak bilgisayar erişimlerini tek bir şifre ile gerçekleştirebilmektedir.
+
 
 
 #### Public Key ve Private Key oluşturma
@@ -401,30 +404,32 @@ Anahtarları oluşturmak için öncelikle aşağıdaki komutu kullanmamız gerek
 ```sh
 ssh-keygen
 ```
-> [!IMPORTANT]
-> `ssh-keygen` komutunu hem Windows terminalinde hem de Ubuntu serverinin terminalinde yazalım.
-> bizim kopyalama işlemini yapacağımız Anahtar Windows içerisinde oluşturduğumuz `id_rsa.pub` dosyası olacaktır.
-> Bu anahtarı Ubuntu sunucusunun `/root/.ssh` dizinindeki `authorized_keys` dosyası içerisine yapıştırmamız gerekmektedir. Eğer böyle bir dosya yok ise kendiniz oluşturun.
 
 Bizden key dosyalarını oluşturacak dizin isteniyor, boş bırakarak Enter tuşuna basmanız yeterli olacaktır.
 ![image](https://github.com/user-attachments/assets/ede627d2-5ee9-4c45-ae2f-21a31f48cce5)
 
 Eğer daha önce bir key oluşturduysanız, sizden yeni keyi mevcut dosyanın üzerine yazmak için izin isteyecektir. Ona 'Y' diyip Enter demeniz yeterli olacaktır.
 
-Sonrasında sizden şifre girmeniz istenecek. Biz her seferinde şifre girmek istemediğimiz için şifre yerini boş bırakıp enter dememiz yeterli olacaktır.
+Sonrasında sizden şifre girmeniz istenecek. Biz her seferinde şifre girmek istemediğimiz için şifre yerini boş bırakıp enter dememiz yeterli olur.
 
-Bütün işlemleri tamamladıktan sonra karşımıza aşağıdaki gibi bir ekran çıkacaktır.
+Bütün işlemleri tamamladıktan sonra karşımıza aşağıdaki gibi bir ekran çıkacak.
 
 ![image](https://github.com/user-attachments/assets/00bb5193-c556-4808-8b4b-f0d33b8551e6)
 
-Windows `~/.ssh` dizininde bulunan `id_rsa.pub` dosyasının içerisindeki anahtarı, Ubuntu sunucusunun `/root/.ssh` dizinindeki `authorized_keys` dosyası içerisine yapıştırmamız gerekmektedir.
+
+> [!IMPORTANT]
+> `ssh-keygen` komutunu hem Windows terminalinde hem de Ubuntu serverinin terminalinde yazalım.
+> Bizim kopyalama işlemini yapacağımız Anahtar Windows içerisinde oluşturduğumuz `id_rsa.pub` dosyası olacaktır.
+> Windows `~/.ssh` dizininde bulunan `id_rsa.pub` dosyasının içerisindeki anahtarı, Ubuntu sunucusunun `/root/.ssh` dizinindeki `authorized_keys` dosyası içerisine yapıştırmamız gerekmektedir.
 
 > [!IMPORTANT]
 > Bütün işlemleri yaptıktan sonra Ubuntu Serverini `Reboot` etmeyi unutmayın!
 
 Artık şifre kullanmadan SSH bağlantımızı gerçekleştirebiliriz.
 
-#### SSH Config
+---
+
+### SSH Config
 
 
 
