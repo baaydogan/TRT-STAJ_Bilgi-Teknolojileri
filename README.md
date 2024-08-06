@@ -32,6 +32,97 @@ Ubuntu Server kurulum ISO dosyasını [Ubuntu 22.04.04](https://releases.ubuntu.
 
 ![image](https://github.com/user-attachments/assets/4db03415-70c3-493c-8b2d-133a7ee4d162)
 
+İndirmiş olduğumuz ISO dosyasının kurulumu için VirtualBox uygulmasını açıp `Yeni` yazan butona tıklıyoruz.
+
+![Ekran görüntüsü 2024-08-06 110652](https://github.com/user-attachments/assets/6ddb082a-940c-4ff6-8690-7c59fb07a96d)
+
+Sunucumuza bir **AD** girip `ISO Kalıbı` adlı yere indirdiğimiz ISO dosyasını ekliyoruz. Ardından ileri diyerek devam ediyoruz.
+
+![image](https://github.com/user-attachments/assets/040fa7ed-ab40-4dee-880c-86a5875f93fc)
+
+`Kullanıcı adı` ve `parola` bilgilerini giriyoruz. Ardından ileri diyerek devam ediyoruz.
+
+![image](https://github.com/user-attachments/assets/972b50e8-aea2-467f-9f4a-f9d0e38f7a03)
+
+Cihazınızın mevcut **Ram** ve **İşlemci** özelliklerine göre dilediğiniz özelliklendirmeyi sanal makineniz için yapabilirsiniz. 
+Kurulumda kullanılan cihazın Teknik özellikleri:
+- 16GB Ram
+- i7 11800H
+
+Sanal makinemiz için bu teknik özelliklere sahip bilgisayarda `4096MB` Ana bellek ve `2` Çekirdek fazlasıyla yeterli olacaktır.
+
+![image](https://github.com/user-attachments/assets/d2e3d7c2-33a4-4d4b-987b-bddfc65784a6)
+
+Depolama olarak da mevcut sistemde 25GB alan yeterli olacaktır.
+
+![image](https://github.com/user-attachments/assets/ac81ade2-dbaa-4ec6-acfc-3fe106e9b066)
+
+Yapmış olduğunuz yapılandırmaları kontrol ederek **"BİTİR"** demeniz kurulumu başarıyla sonlandıracaktır.
+
+![image](https://github.com/user-attachments/assets/892494a4-826d-4a24-b61d-ea812c275685)
+
+Kurmuş olduğunuz Sanal Makinenin ayarlarından `AĞ` kısmına giderek sunucumuzun bağlantısını `"Yalnızca-Anamakine Bağdaştırıcısı"` olarak ayarlayın.
+
+![image](https://github.com/user-attachments/assets/53120797-9d6d-460d-a5f2-4eac5184ba6f)
+
+---
+Arık Ubuntu Serverimizi açabiliriz. Bizi karşılayacak ilk ekran Serverimizin dilini belirleyeceği ekrandır. Burada yapmamız gereken `ENGLISH` seçeneğini seçmek ve `Enter`a basmaktır.
+
+![image](https://github.com/user-attachments/assets/a81e4001-ea75-4998-b1d5-c77bfab7f4a9)
+
+Gelen ekranda klavyemizin dilini seçmemiz gerekmektedir. Burada `Layout` yazan yerin üstüne gelip `Enter` tuşuna basıyoruz.
+![image](https://github.com/user-attachments/assets/50b77bdb-95ad-40c6-b928-bae9f249fcae)
+![image](https://github.com/user-attachments/assets/8114e69b-37f4-4f99-803b-fa2b91fd0fac)
+
+Şimdi karşımıza Network ayarlarını yapılandıracağımız bölüm geldi. Ethernet kartımızı görüyoruz, ağ ayarlarını otomatik ve ya statik olarak yapılandırmamızı istiyor. Bu kısımda `Done` diyerek otomatik yapılandırma yapmasınına izin veriyoruz.
+![image](https://github.com/user-attachments/assets/3e80ec7c-e09f-4909-8ac1-37bbac483517)
+
+Ubuntu güncellemelerini çekeceği Mirror adresini buradan ayarlayabilirsiniz. Olduğu gibi bırakarak ilerliyoruz.
+![image](https://github.com/user-attachments/assets/0d6cf401-370f-45ef-8ec5-f7245a2746cf)
+
+Sunucumuz için ayarladığımız 25 GB disk bölümünü gördü. Farklı bir disk ayarladıysanız seçebilirsiniz. Varsayılan olarak bırakıp `Done` ile devam ediyoruz.
+
+![image](https://github.com/user-attachments/assets/1eb3aacf-9a10-45a7-a9d3-c07673d0c5a7)
+
+Otomatik olarak yapılandırılan dosya sistemimizi Done ile kabul ediyoruz.
+
+![image](https://github.com/user-attachments/assets/a11cab44-4e39-4b0f-9209-483f23dd4c50)
+
+Gelen ekranda disk üzerindeki her şeyin silineceğini söyleyen uyarı ekranı geliyor. Continue ile devam ediyoruz.
+
+![image](https://github.com/user-attachments/assets/12728055-0982-4a15-8e8f-e235bcb3bcb0)
+
+Kullanıcı ekleme bölümü karşımıza gelecektir. Bu bölümde gerekli alanları doldurarak Ubuntu’da kurulum sonrası login olacağımız bir hesap oluşturuyoruz.
+
+![image](https://github.com/user-attachments/assets/b8f89a15-fb01-4900-98f5-27e0a4d3831c)
+
+Windows Powershell veya Putty vb. araçlar ile uzaktan oturum açmak için `Install OpenSSH server` işaretleyip `Done` ile devam ediyoruz. SSH yüklemek istemiyorsak seçmeden devam edebiliriz ve sonrasında da SSH yükleyebiliriz.
+
+![image](https://github.com/user-attachments/assets/3dd19389-29e6-40db-9428-8acafde1b2d4)
+
+Kurmak istediğimiz servislerin listesinin olduğu bir ekran karşımıza gelecektir. Bu bölümden kurmak istediğimiz servisleri seçip devam edebiliriz. Bu servisleri istediğimiz zaman da kurabiliriz. Burada `Docker` ve `Powershell` servislerini seçerek `Done` diyerek devam ediyoruz. 
+
+![image](https://github.com/user-attachments/assets/46363b11-f8b9-4c95-b5ce-9630eea45b55)
+
+Ubuntu Server ve gerekli servislerin kurulumları başlayacaktır. Bütün kurulumlar bittikten sonra `Reboot Now` aktif olacaktır. Bu bölümün üstüne gelip Enter yaptığımızda sistemimiz yeniden başlayacaktır ve işletim sistemi kurulu olarak karşımıza gelecektir.
+
+![image](https://github.com/user-attachments/assets/80af0ad4-2b0c-4cdf-94f7-976692b8a8f3)
+
+
+## Ubuntu Server'a Giriş
+
+Artık nur topu gibi bir sunucumuz oldu! 
+
+![Ekran görüntüsü 2024-08-06 121734](https://github.com/user-attachments/assets/de0f9711-f2aa-4319-a679-127f84c69af7)
+
+
+
+
+
+
+
+
+
 
 
 
