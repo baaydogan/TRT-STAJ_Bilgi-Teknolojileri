@@ -125,7 +125,7 @@ Server açıldığında bizi ilk olarak kullanıcı bilgilerini girmemiz istenen
 
 ### Terminal Temel Komutları
 
-Ubuntu terminali için temel komutlar aşağıdaki gibidir
+Terminal üzerinde çalışırken bize sıkça lazım olacak komutlar aşağıda listeler halinde belirtilmiştir. Bu komutları iyi öğrenmeniz terminalde çalışabilmeniz için oldukça önemli.
 
 
 #### Dosya ve Dizin İşlemleri
@@ -176,7 +176,7 @@ Ubuntu terminali için temel komutlar aşağıdaki gibidir
    mv eski_isim yeni_isim       # Dizin/Dosya Yeniden adlandırmak için
    ```
 
-
+---
 
 #### Dosya Görüntüleme ve Düzenleme
 
@@ -204,7 +204,7 @@ Ubuntu terminali için temel komutlar aşağıdaki gibidir
    vim dosya.txt
    ```
 
-
+---
 
 #### Sistem Yönetimi
 
@@ -241,7 +241,7 @@ Ubuntu terminali için temel komutlar aşağıdaki gibidir
    > [!NOTE]
    > PID (Process ID) süreç kimliğidir.
 
-
+---
 
 #### Ağ Komutları
 
@@ -260,7 +260,7 @@ Ubuntu terminali için temel komutlar aşağıdaki gibidir
    ssh kullanıcı_adi@hedef_ip_adresi    # SSH ile uzak sunucuya bağlanmak için
    ```
 
-
+---
 
 #### Yardım ve Bilgi
 
