@@ -127,6 +127,7 @@ Server açıldığında bizi ilk olarak kullanıcı bilgilerini girmemiz istenen
 
 Ubuntu terminali için temel komutlar aşağıdaki gibidir
 
+
 #### Dosya ve Dizin İşlemleri
 
 **ls**
@@ -134,6 +135,7 @@ Ubuntu terminali için temel komutlar aşağıdaki gibidir
    ls       # Dizin içeriğini listelemek için
    ls -la   # Alt dizinlerle birlikte detaylı listeleme için
    ```
+
 **cd**
    ```sh
    cd /path/to/directory   # Dizin değiştirmek
@@ -174,6 +176,8 @@ Ubuntu terminali için temel komutlar aşağıdaki gibidir
    mv eski_isim yeni_isim       # Dizin/Dosya Yeniden adlandırmak için
    ```
 
+
+
 #### Dosya Görüntüleme ve Düzenleme
 
 **cat**
@@ -200,6 +204,8 @@ Ubuntu terminali için temel komutlar aşağıdaki gibidir
    vim dosya.txt
    ```
 
+
+
 #### Sistem Yönetimi
 
 **sudo**
@@ -211,11 +217,9 @@ Ubuntu terminali için temel komutlar aşağıdaki gibidir
    ```sh
    sudo apt-get update    # Paket listelerini güncellemek için
    ```
-   
    ```sh
    sudo apt-get install paket_adi    # Paket kurmak için 
    ```
-
    ```sh
    sudo apt-get remove paket_adi     # Paket kaldırmak için
    ```
@@ -237,6 +241,8 @@ Ubuntu terminali için temel komutlar aşağıdaki gibidir
    > [!NOTE]
    > PID (Process ID) süreç kimliğidir.
 
+
+
 #### Ağ Komutları
 
 **ping**
@@ -253,6 +259,8 @@ Ubuntu terminali için temel komutlar aşağıdaki gibidir
    ```sh
    ssh kullanıcı_adi@hedef_ip_adresi    # SSH ile uzak sunucuya bağlanmak için
    ```
+
+
 
 #### Yardım ve Bilgi
 
