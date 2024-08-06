@@ -285,7 +285,7 @@ Terminal komutlarını da öğrendiğimize göre artık SSH bağlantısı yapabi
 ---
 ---
 
-## SSH Bağlantısı
+## SSH BAĞLANTISI
 
 ### SSH Nedir?
 SSH (Secure Shell), ağ üzerinden güvenli bir şekilde veri iletimi ve uzaktan yönetim sağlamak için kullanılan bir protokoldür. SSH, kullanıcıların başka bir bilgisayarda komutları çalıştırmasına, dosya transferi yapmasına ve ağ servislerini güvenli bir şekilde kullanmasına olanak tanır. SSH, özellikle güvenlik gerektiren işlemler için tercih edilir.
